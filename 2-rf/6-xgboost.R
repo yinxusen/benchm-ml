@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 library(readr)
 library(ROCR)
 library(xgboost)
@@ -6,8 +8,8 @@ library(Matrix)
 
 set.seed(123)
 
-d_train <- read_csv("train-0.1m.csv")
-d_test <- read_csv("test.csv")
+d_train <- read_csv("~/data/airline/train-0.1m.csv")
+d_test <- read_csv("~/data/airline/test.csv")
 
 
 system.time({

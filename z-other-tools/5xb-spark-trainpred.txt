@@ -1,13 +1,6 @@
-
-
-
 spark-1.5.0-bin-hadoop2.4/bin/spark-shell --driver-memory 120G --executor-memory 120G
 
-
-
-
 // adapted from Joseph Bradley @jkbradley https://gist.github.com/jkbradley/1e3cc0b3116f2f615b3f
-
 
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.mllib.linalg.{Vector, Vectors}

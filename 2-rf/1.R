@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 
 library(data.table)
 library(ROCR)
@@ -6,8 +7,8 @@ library(parallel)
 
 set.seed(123)
 
-d_train <- as.data.frame(fread("train-0.1m.csv"))
-d_test <- as.data.frame(fread("test.csv"))
+d_train <- as.data.frame(fread("~/data/airline/train-0.1m.csv"))
+d_test <- as.data.frame(fread("~/data/airline/test.csv"))
 
 ## "Can not handle categorical predictors with more than 53 categories."
 ## so need dummy variables/1-hot encoding
