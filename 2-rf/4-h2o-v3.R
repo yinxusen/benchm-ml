@@ -2,7 +2,7 @@
 
 library(h2o)
 
-h2oServer <- h2o.init(max_mem_size="60g", nthreads=-1)
+h2oServer <- h2o.init(max_mem_size="60g", nthreads=4)
 
 dx_train <- h2o.importFile(path = "/Users/panda/data/airline/train-0.1m.csv")
 dx_test <- h2o.importFile(path = "/Users/panda/data/airline/test.csv")

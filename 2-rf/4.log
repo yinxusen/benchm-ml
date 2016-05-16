@@ -1,0 +1,247 @@
+panda@pandadeMacBook-Pro 2-rf master*$ ./4-h2o-v3.R
+Loading required package: methods
+Loading required package: statmod
+
+----------------------------------------------------------------------
+
+Your next step is to start H2O:
+    > h2o.init()
+
+For H2O package documentation, ask for help:
+    > ??h2o
+
+After starting H2O, you can use the Web UI at http://localhost:54321
+For more information visit http://docs.h2o.ai
+
+----------------------------------------------------------------------
+
+
+Attaching package: ‘h2o’
+
+The following objects are masked from ‘package:stats’:
+
+    sd, var
+
+The following objects are masked from ‘package:base’:
+
+    &&, %*%, %in%, ||, apply, as.factor, as.numeric, colnames,
+    colnames<-, ifelse, is.character, is.factor, is.numeric, log,
+    log10, log1p, log2, round, signif, trunc
+
+
+H2O is not running yet, starting it now...
+
+Note:  In case of errors look at the following log files:
+    /var/folders/nq/s7jjljy126s1lfkwz51nx0pc0000gn/T//RtmpPtHH5j/h2o_panda_started_from_r.out
+    /var/folders/nq/s7jjljy126s1lfkwz51nx0pc0000gn/T//RtmpPtHH5j/h2o_panda_started_from_r.err
+
+java version "1.8.0_31"
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
+
+Starting H2O JVM and connecting: .. Connection successful!
+
+R is connected to the H2O cluster:
+    H2O cluster uptime:         1 seconds 449 milliseconds
+    H2O cluster version:        3.8.1.3
+    H2O cluster name:           H2O_started_from_R_panda_mom229
+    H2O cluster total nodes:    1
+    H2O cluster total memory:   53.33 GB
+    H2O cluster total cores:    8
+    H2O cluster allowed cores:  4
+    H2O cluster healthy:        TRUE
+    H2O Connection ip:          localhost
+    H2O Connection port:        54321
+    H2O Connection proxy:       NA
+    R Version:                  R version 3.2.2 (2015-08-14)
+
+  |======================================================================| 100%
+  |======================================================================| 100%
+  |=======                                                               |  10%^C
+Job $03017f00000132d4ffffffff$_b6549c1f463495e9867987a9627e4b7a was cancelled.
+
+H2O Grid Details
+================
+
+Grid ID: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1
+Used hyper parameters:
+  -  sample_rate
+  -  nbins_cats
+  -  nbins
+  -  min_rows
+  -  ntrees
+  -  max_depth
+  -  mtries
+  -  stopping_metric
+Number of models: 33
+Number of failed models: 16
+
+Hyper-Parameter Search Summary: ordered by increasing logloss
+  sample_rate nbins_cats nbins min_rows ntrees max_depth mtries stopping_metric
+1         0.8       1024    20        1    250         5     -1             AUC
+2         0.8       1024    20        1     50         5     -1             AUC
+3         0.8       1024    20        1    100         5     -1             AUC
+4       0.632       1024    20        1    250         5     -1             AUC
+5         0.8       1024    20        1     50        10     -1             AUC
+                                                            model_ids
+1 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_31
+2 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_25
+3 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_28
+4 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_30
+5 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_43
+            logloss
+1 0.447273134928714
+2 0.447478711059136
+3 0.448187976081952
+4 0.448196581160979
+5 0.448265674538969
+
+---
+   sample_rate nbins_cats nbins min_rows ntrees max_depth mtries
+28       0.632       1024    20        1     50         1     -1
+29       0.632       1024    20        1      5        10     -1
+30       0.632       1024    20        1      1         1     -1
+31         0.8       1024    20        1      1         1     -1
+32         0.8       1024    20        1      1        10     -1
+33       0.632       1024    20        1      1        10     -1
+   stopping_metric
+28             AUC
+29             AUC
+30             AUC
+31             AUC
+32             AUC
+33             AUC
+                                                             model_ids
+28  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_6
+29 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_39
+30  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_0
+31  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_1
+32 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_37
+33 Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_36
+             logloss
+28 0.478004333969051
+29 0.479056491955606
+30  0.48462325165804
+31 0.484951410499797
+32  1.84277713368601
+33  2.02665984402946
+Failed models
+-------------
+ sample_rate nbins_cats nbins min_rows ntrees max_depth mtries stopping_metric
+         1.0       1024    20      1.0      1         1     -1             AUC
+         1.0       1024    20      1.0      5         1     -1             AUC
+         1.0       1024    20      1.0     50         1     -1             AUC
+         1.0       1024    20      1.0    100         1     -1             AUC
+         1.0       1024    20      1.0    250         1     -1             AUC
+         1.0       1024    20      1.0    500         1     -1             AUC
+         1.0       1024    20      1.0      1         5     -1             AUC
+         1.0       1024    20      1.0      5         5     -1             AUC
+         1.0       1024    20      1.0     50         5     -1             AUC
+         1.0       1024    20      1.0    100         5     -1             AUC
+         1.0       1024    20      1.0    250         5     -1             AUC
+         1.0       1024    20      1.0    500         5     -1             AUC
+         1.0       1024    20      1.0      1        10     -1             AUC
+         1.0       1024    20      1.0      5        10     -1             AUC
+         1.0       1024    20      1.0     50        10     -1             AUC
+         1.0       1024    20      1.0    100        10     -1             AUC
+ status_failed
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+          FAIL
+                                                                                                                                                                                                                                                                   msgs_failed
+  "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_2.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+  "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_5.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+  "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_8.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_11.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_14.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_17.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_20.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_23.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_26.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_29.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_32.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_35.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_38.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_41.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_44.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+ "Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_47.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!\n"
+H2O Grid Summary
+================
+
+Grid ID: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1
+Used hyper parameters:
+  -  sample_rate
+  -  nbins_cats
+  -  nbins
+  -  min_rows
+  -  ntrees
+  -  max_depth
+  -  mtries
+  -  stopping_metric
+Number of models: 33
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_31
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_25
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_28
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_30
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_43
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_46
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_34
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_33
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_27
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_24
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_48
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_21
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_42
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_45
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_22
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_19
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_40
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_18
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_13
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_12
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_16
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_15
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_3
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_4
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_10
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_9
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_7
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_6
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_39
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_0
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_1
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_37
+  -  Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_36
+
+Number of failed models: 16
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_2.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_5.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_8.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_11.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_14.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_17.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_20.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_23.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_26.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_29.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_32.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_35.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_38.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_41.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_44.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+  -  Illegal argument(s) for DRF model: Grid_DRF_train_0_1m.hex_sid_81a8_1_model_R_1462918355598_1_model_47.  Details: ERRR on field: _sample_rate: Sample rate is 100% and no validation dataset is specified.  There are no OOB data to compute out-of-bag error estimation!
+
+Note: To see exception stack traces please pass parameter `show_stack_traces = T` to this function.
